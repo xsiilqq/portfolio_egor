@@ -63,17 +63,14 @@
   display: flex;
   align-items: center;
 }
-
-.nav-list {
-    gap: 40px;
+.page-header-container {
   display: flex;
+  
   align-items: center;
-  justify-content: flex-end;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--ocean);
-}
+
 
 .nav-link {
  padding: 10px;
@@ -88,10 +85,40 @@
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.container-social-icon {
+
+/* Основной контейнер навигации */
+.nav {
   display: flex;
-  flex-direction: column;
-  margin-right: 80px;
+  align-items: center;
+  /* Центрирует элементы по вертикали */
+  justify-content: space-between;
+  /* Логотип уйдет влево, остальное — вправо */
+}
+
+/* Группируем навигацию и иконки, чтобы они стояли вместе справа */
+.nav-list,
+.media-icons {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  /* Убираем маркеры списков */
+  margin: 0;
+  padding: 0;
+}
+
+/* Добавляем отступ между списком меню и блоком иконок */
+.nav-list {
+  margin-left: auto;
+  /* Это вытолкнет навигацию максимально вправо от логотипа */
+  gap: 20px;
+  /* Расстояние между пунктами меню */
+}
+
+.media-icons {
+  margin-left: 40px;
+  /* Расстояние между меню и блоком соцсетей */
+  gap: 12px;
+  /* Расстояние между иконками */
 }
 
 
@@ -100,7 +127,7 @@
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.container-social-icon .social-media-text {
+.social-media-text {
   color: #ffffff;
   font-weight: 500;
   margin-bottom: 16px;
@@ -111,7 +138,7 @@
   fill: #ffffff;
 }
 
-.container-social-icon .media-icons {
+ .media-icons {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -164,7 +191,7 @@
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-text {
-  margin-left: 20px; /* подбери сколько надо */
+  margin-left: 20px; 
 }
 .main-button:hover,
 .main-button:focus {
