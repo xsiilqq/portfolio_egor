@@ -59,6 +59,12 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
+
+
+
+
+
+/* HEADER STYLES */
 .header .container {
   display: flex;
   align-items: center;
@@ -70,7 +76,20 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
+.logo-header {
+  display: flex;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.16667;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--iris);
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-right: 60px;
+}
 
 .nav-link {
  padding: 10px;
@@ -100,18 +119,14 @@
 .media-icons {
   display: flex;
   align-items: center;
-  list-style: none;
-  /* Убираем маркеры списков */
   margin: 0;
   padding: 0;
 }
 
-/* Добавляем отступ между списком меню и блоком иконок */
+
 .nav-list {
   margin-left: auto;
-  /* Это вытолкнет навигацию максимально вправо от логотипа */
   gap: 20px;
-  /* Расстояние между пунктами меню */
 }
 
 .media-icons {
