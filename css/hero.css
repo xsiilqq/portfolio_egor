@@ -1,5 +1,13 @@
 
 /* --- HERO SECTION --- */
+.background {
+   background-image: url("/images/IMG_5221.JPG");
+      min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
 .hero {
   display: flex;
   align-items: center;
