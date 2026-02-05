@@ -1,0 +1,143 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.container {
+    background-color: rgb(8, 8, 8);
+}
+.about-me {
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 100px;
+    padding-bottom: 200px;
+}
+.text-container {
+    display: flex;
+    margin-right: 350px;
+    margin-left: 200px;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.about-page {
+    display: flex;
+    color: #ffffff;
+    padding-left: 50px;
+    font-size: 70px;
+    font-weight: 500;
+    margin-bottom: 45px;
+}
+
+.name {
+    display: flex;
+    color: #ffffff;
+    padding-left: 50px;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.about-text {
+    display: flex;
+    color: #ffffff;
+    text-indent: 5%;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    
+}
+
+.foto-main {
+    display: flex;
+    max-width: 600px;
+    height: auto;
+}
+
+.working-text {
+    display: flex;
+    color: #ffffff;
+    padding-left: 50px;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.about-work {
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+    line-height: 1.8;
+    list-style-type: disc;
+    text-indent: 1%;
+    list-style-position: inside;
+    margin-bottom: 40px;
+}
+
+.process-text {
+    display: flex;
+    color: #ffffff;
+    padding-left: 50px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.process {
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+    line-height: 1.8;
+    list-style-type: disc;
+    text-indent: 1%; 
+    margin-bottom: 40px;
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+/* --- FOOTER --- */
+.footer-section {
+display: flex;
+flex-direction: column;
+padding-left: 15px;
+padding-right: 15px;
+padding-bottom: 100px;
+}
+
+.contact-item {
+display: flex;
+margin-bottom: 5px;
+padding-left: 100px;
+}
+
+.contacts {
+    display: flex;
+    color: #ffffff;
+    padding-left: 150px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom:10px;
+}
+
+.contacts-label {
+    display: flex;
+    color: #ffffff;
+    padding-left: 50px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.contacts-link{
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.contacts-link:hover {
+    text-decoration: underline;
+}
