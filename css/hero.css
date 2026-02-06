@@ -54,7 +54,11 @@ color: #ffffff;
 
 
 .main-button {
-  display: block;   
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  justify-content: center;
   padding: 16px 32px;
   min-width: 331px;
   height: 99px;

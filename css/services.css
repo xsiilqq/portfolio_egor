@@ -7,13 +7,14 @@
    background-size: cover;
    background-position: center;
    background-attachment: fixed;
-
 }
+
 .service-section{
    background-color: black;
    padding: 90px 40px 35px 40px;
    margin-top: 80px;
 }
+
 .service-title{
    display: flex;
    color: #ffffff;
@@ -22,6 +23,7 @@
    font-size: 54px;
    font-weight: 500;
 }
+
 .service-text{
    display: flex;
    color: #ffffff;
@@ -31,34 +33,39 @@
    font-weight: 300 ;
    max-width: 1060px;
 }
+
 .price-container {
    padding: 60px 200px;
    margin: 40px;
    margin: 0;
    background-color: #52691d;
-
 }
+
 .menu-price {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    gap: 30px;
    list-style: none;
 }
+
 .price-item {
    overflow: hidden;
 
 }
+
 .price-item img {
    object-fit: cover;
    display: block;
    max-height: 323px;
    min-width: 295px;
 }
+
 .img-container{
    display: flex;
    max-height: 323px;
    max-width: 295px;
 }
+
 .price-overlay {
    position: relative;
    display: flex;
