@@ -67,9 +67,26 @@ function renderReviews(reviews) {
   });
 }
 
+const toast = document.getElementById("toast");
+
+function showToast(message) {
+  if (!toast) return;
+  toast.textContent = message;
+  toast.classList.add("show");
+
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2500);
+}
+
+
 // realtime read
 onSnapshot(query(reviewsRef, orderBy("createdAt", "desc")), (snapshot) => {
-  const reviews = snapshot.docs.map(d => d.data());
+  const reviews = snapshot.docs
+    .map(d => d.data())
+    .filter(r => r.status === "approved");
+
   renderReviews(reviews);
 });
 
@@ -102,9 +119,10 @@ form.addEventListener("submit", async (e) => {
       email,
       text,
       createdAt: serverTimestamp(),
+      status: "pending",
     });
 
-       alert("Thanks for your feedback 💙");
+      showToast("Thanks for your feedback 💙");
     console.log("Saved ✅");
     form.reset();
   } catch (err) {
