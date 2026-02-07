@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>top-works</title>
+
+            <!-- normalize -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+                integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <!-- fonts -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+                rel="stylesheet">
+            <link
+                href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+                rel="stylesheet">
+            
+            <!-- styles -->
+            <link rel="stylesheet" href="css/reset.css">
+            <link rel="stylesheet" href="css/base.css">
+            <link rel="stylesheet" href="css/header.css">
+            <link rel="stylesheet" href="css/top-works.css">
+            
+            <link rel="stylesheet" href="./css/base.css" />
+            <link rel="stylesheet" href="./css/layout.css" />
+            <link rel="stylesheet" href="./css/video.css" />
+            <link rel="stylesheet" href="./css/top-works.css" />
+            
+            <script src="./js/main.js"></script>
+            <script src="./js/video.js" defer></script>
+
+</head>
+<body>
+            <!-- header-->
+            
+            <div class="container">
+                <header class="header">
+                    <div class=" page-header-container">
+                        <nav class="nav">
+                            <a href="./index.html" class="link logo-header"><span>Vosup</span> <span>Creator</span></a>
+            
+                            <ul class="nav-list">
+                                <li class="nav-item">
+                                    <a href="./portfolio.html" class="link nav-link">Portfolio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./services.html" class="link nav-link">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./about.html" class="link nav-link">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/feedback.html" class="link nav-link">Feedback</a>
+                                </li>
+                            </ul>
+                            <!-- icons-->
+            
+                            <ul class="media-icons">
+                                <li class="social-header">
+                                    <a href="https://www.instagram.com/vosup.creator?igsh=MXM1MW1uOXY5emhncA%3D%3D&utm_source=qr"
+                                        target="_blank" rel="noopener" class="social-link" class="social-link">
+                                        <svg class="social_media" width="24" height="24">
+                                            <use href="./images/icons.svg#icon-instagram"></use>
+                                            <a href="https://t.me/ya_roge" class="contacts-link" target="_blank"></a>
+                                        </svg>
+                                    </a>
+                                </li>
+            
+                                <li class="social-header">
+                                    <a href="https://t.me/ya_roge" target="_blank" rel="noopener" class="social-link"
+                                        class="social-link">
+                                        <svg class="social_media" width="24" height="24">
+                                            <use href="./images/icons.svg#icon-telegram1"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+            
+                                <li class="social-header">
+                                    <a href="https://wa.me/message/H467SCUJ27NOK1" target="_blank" rel="noopener"
+                                        class="social-link" class="social-link">
+                                        <svg class="social_media" width="24" height="24">
+                                            <use href="./images/icons.svg#icon-whatsapp"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+                
+
+                <main>
+                    <div class="container">
+
+                        <section class="top-works">
+                            <h1 class="top-works__title">Top works</h1>
+                        
+                            <div class="video-grid">
+                                <article class="video-card">
+                                    <button class="video-btn" type="button" aria-label="Play video">
+                                        <video class="work-video" preload="metadata" playsinline muted>
+                                            <source src="./videos/work-1.mp4" type="video/mp4" />
+                                        </video>
+                                        <span class="video-play">▶</span>
+                                    </button>
+                                    <p class="video-caption">Project name / short description</p>
+                                </article>
+                        
+                                <article class="video-card">
+                                    <button class="video-btn" type="button" aria-label="Play video">
+                                        <video class="work-video" preload="metadata" playsinline muted>
+                                            <source src="./videos/work-2.mp4" type="video/mp4" />
+                                        </video>
+                                        <span class="video-play">▶</span>
+                                    </button>
+                                    <p class="video-caption">Project name / short description</p>
+                                </article>
+                            </div>
+                        </section>
+
+
+                    </div>
+                </main>
+</body>
+</html>

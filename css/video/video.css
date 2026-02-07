@@ -1,0 +1,56 @@
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.video-card {
+    display: grid;
+    gap: 10px;
+}
+
+.video-btn {
+    position: relative;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.work-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.video-play {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 48px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.45));
+    opacity: 1;
+    transition: opacity 180ms ease;
+    pointer-events: none;
+}
+
+.video-btn.is-playing .video-play {
+    opacity: 0;
+}
+
+.video-caption {
+    margin: 0;
+    opacity: 0.85;
+    font-size: 14px;
+}
