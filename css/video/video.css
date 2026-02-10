@@ -1,21 +1,27 @@
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 @media (max-width: 768px) {
     .video-grid {
         grid-template-columns: 1fr;
+
     }
 }
 
 .video-card {
     display: grid;
     gap: 10px;
+
 }
 
 .video-btn {
+    display: flex;
+    justify-content: center;
     position: relative;
     border: 0;
     padding: 0;
@@ -26,11 +32,13 @@
 }
 
 .work-video {
-    width: 100%;
-    height: auto;
-    display: block;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+        height: auto;
+        display: block;
+        object-fit: contain;
+        /* ✅ не режет */
+        background: #000;
+        /* чтобы поля были красивыми */
+        max-height: 520px;
 }
 
 .video-play {
@@ -45,11 +53,17 @@
     pointer-events: none;
 }
 
-.video-btn.is-playing .video-play {
+.video-btn .video-play {
+    opacity: 1;
+    transition: opacity 180ms ease;
+}
+
+.video-btn.is-click-playing .video-play {
     opacity: 0;
 }
 
 .video-caption {
+    color: #ffffff;
     margin: 0;
     opacity: 0.85;
     font-size: 14px;
