@@ -68,11 +68,8 @@ button {
 }
 
 .container {
-      max-width: 320px;
-      padding-left: 15px;
-      padding-right: 15px;
-      margin-left: auto;
-      margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -85,6 +82,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .logo-header {
@@ -294,73 +293,36 @@ fill: currentColor;
 
 
 
+/* ---------------- TABLET SECTION ---------------- */
+
+/* ----------- tablet header---------- */
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .mobile-menu-open {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .media-icons {
+    display: flex;
+  }
+}
 
 
+/* ---------------- desktop SECTION ---------------- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* -----------desktop header---------- */
 @media screen and (min-width: 1158px) {
   .container {
-    max-width: 1158px;
-    padding-right: 15px;
-    padding-left: 15px;
+    max-width: 100%;
   }
 
   .mobile-menu-open {
@@ -443,7 +405,7 @@ align-items: flex-start;
   fill: #ffffff;
 }
 
- .media-icons {
+.media-icons {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -465,8 +427,8 @@ align-items: flex-start;
 }
 
 
-.media-icons .social-link:hover,
-.media-icons .social-link:focus{
-  color: #dbc650; 
+.media-icons:hover,
+.media-icons:focus{
+  fill: #dbc650; 
 }
-}
+} 
