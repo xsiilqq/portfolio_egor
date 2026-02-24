@@ -150,10 +150,14 @@ button {
       margin-right: auto;
     }
 
-        .nav-link:hover,
-        .nav-link:focus {
-          color: #dbc650;
-        }
+    .nav-link {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .nav-link:hover,
+    .nav-link:focus {
+      color: #dbc650;
+    }
   
     .mobile-menu-open {
       display: flex;
@@ -191,7 +195,7 @@ position: absolute;
   pointer-events: none;
   z-index: 999;
   padding-left: 16px;
-  padding-top: 72px;
+  padding-top: 120px;
   padding-right: 16px;
   padding-bottom: 40px;
   opacity: 0;
@@ -200,7 +204,6 @@ position: absolute;
   transform: translateY(-12px);
   transition: opacity 250ms ease, transform 250ms ease, visibility 250ms ease;
 }
-
 
 .mobile-menu.is-open {
   opacity: 1;
@@ -237,7 +240,8 @@ position: absolute;
 
 .modal-nav {
   display: flex;
-  margin-bottom: 168px;
+  margin-bottom: 350px;
+  padding-left: 50px;
 }
 
 .modal-nav-list {
