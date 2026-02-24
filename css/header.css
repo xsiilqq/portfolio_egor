@@ -173,8 +173,7 @@ button {
           transition: fill 250ms ease;
         }
     
-        .mobile-menu-open:hover,
-        .mobail-menu-open:focus {
+        .mobile-menu-open:hover {
           color: #dbc650;
         }
   
@@ -232,8 +231,7 @@ position: absolute;
 
 
 
-.mobile-menu-close:hover,
-.mobile-menu-close:focus {
+.mobile-menu-close:hover {
   fill: #dbc650;
   border: none;
 }
