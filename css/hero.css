@@ -1,13 +1,13 @@
 
 .background {
   background-image: url("../images/IMG_5221.JPG");
-  min-height: 100vh;
+  min-height: 100dvh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
 }
-
+ 
 .hero {
   display: flex;
   align-items: center;

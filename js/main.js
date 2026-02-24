@@ -1,16 +1,11 @@
 
-document.querySelectorAll('nav a').forEach((link) => {
-  if (link.pathname === window.location.pathname) {
-    link.classList.add('active');
-  }
-});
+// main.js
 
 document.addEventListener('DOMContentLoaded', () => {
-
-  // ===== АКТИВНАЯ ССЫЛКА =====
+  // ===== АКТИВНАЯ ССЫЛКА (header + mobile menu) =====
   const currentPath = window.location.pathname;
 
-  document.querySelectorAll('nav a, .modal-nav a').forEach(link => {
+  document.querySelectorAll('nav a, .modal-nav a').forEach((link) => {
     if (link.pathname === currentPath) {
       link.classList.add('active');
     }
@@ -23,59 +18,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!openBtn || !closeBtn || !menu) return;
 
-  // открыть
-  openBtn.addEventListener('click', () => {
+  function openMenu() {
     menu.classList.add('is-open');
-    document.body.style.overflow = 'hidden'; // блокируем скролл
-  });
-
-  // закрыть по крестику
-  closeBtn.addEventListener('click', () => {
-    closeMenu();
-  });
-
-  // закрыть по клику вне контента
-  menu.addEventListener('click', (e) => {
-    if (e.target === menu) {
-      closeMenu();
-    }
-  });
-
-  // закрыть по ESC
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeMenu();
-    }
-  });
+    openBtn.classList.add('active'); // бургер становится "активным" (цвет)
+    document.body.classList.add('no-scroll'); // блокируем скролл
+  }
 
   function closeMenu() {
     menu.classList.remove('is-open');
-    document.body.style.overflow = '';
+    openBtn.classList.remove('active'); // возвращаем цвет бургера назад
+    document.body.classList.remove('no-scroll');
   }
 
-});
-// появление
-window.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.add("page-ready");
-});
+  openBtn.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
 
-// исчезновение перед переходом
-document.addEventListener("click", (e) => {
-  const link = e.target.closest("a");
-  if (!link) return;
+  // клик по фону модалки
+  menu.addEventListener('click', (e) => {
+    if (e.target === menu) closeMenu();
+  });
 
-  const href = link.getAttribute("href");
-  if (!href || href.startsWith("#")) return;
-  if (link.target === "_blank") return;
+  // ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
 
-  const url = new URL(link.href, window.location.href);
-  if (url.origin !== window.location.origin) return;
+  // закрывать меню при клике по ссылке внутри мобильного меню
+  document.querySelectorAll('.modal-nav a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
 
-  e.preventDefault();
-  document.body.classList.remove("page-ready");
+  // ===== АНИМАЦИЯ ПЕРЕХОДОВ (page-ready) =====
+  document.body.classList.add('page-ready');
 
-  setTimeout(() => {
-    window.location.href = link.href;
-  }, 150);
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (!link) return;
+
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#')) return;
+    if (link.target === '_blank') return;
+
+    const url = new URL(link.href, window.location.href);
+    if (url.origin !== window.location.origin) return;
+
+    e.preventDefault();
+
+    // если меню открыто — закроем перед переходом
+    closeMenu();
+
+    document.body.classList.remove('page-ready');
+
+    setTimeout(() => {
+      window.location.href = link.href;
+    }, 150);
+  });
 });
 
