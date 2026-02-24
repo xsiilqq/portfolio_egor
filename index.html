@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="css/header.css">
 <link rel="stylesheet" href="css/hero.css">
 
-<script src="./js/main.js"></script>
+<script src="./js/main.js" defer></script>
 
 
 </head>
@@ -56,6 +56,14 @@
               <a href="./feedback.html" class="link nav-link">Feedback</a>
             </li>
           </ul>
+
+          <button class="mobile-menu-open" type="button">
+            <svg class="mobile-open-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-burger"></use>
+            </svg>
+          </button>
+
+
           <!-- icons-->
          
           <ul class="media-icons">
@@ -63,7 +71,6 @@
               <a href="https://www.instagram.com/vosup.creator?igsh=MXM1MW1uOXY5emhncA%3D%3D&utm_source=qr" target="_blank" rel="noopener" class="social-link"  class="social-link">
                 <svg class="social_media" width="24" height="24">
                   <use href="./images/icons.svg#icon-instagram"></use>
-                  <a href="https://t.me/ya_roge" class="contacts-link" target="_blank"></a>
                 </svg>
               </a>
             </li>
@@ -98,14 +105,78 @@
   PHOTOGRAPHY
   VIDEOGRAPHY
 </p>
+          </div>
 
-           </div>
           <div class="container-button">
           <a href="./portfolio.html" class="type main-button" type="button">Portfolio<span class="button-text">></span></a>
           </div>
       </section>
       </section>
-     </div>
+          </div>
+     
+
+
+      <!--------mobile menu -------->
+      
+      <div class="mobile-menu is-open">
+        <div class="container mobile-menu-container">
+          <button class="mobile-menu-close" type="button">
+            <svg class="mobile-close-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-cross"></use>
+            </svg>
+          </button>
+      
+      
+        <div class="modal-nav">
+          <ul class="modal-nav-list">
+            <li class="nav-item">
+              <a href="./index.html" class="link nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="./services.html" class="link nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="./about.html" class="link nav-link">About</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a href="./feedback.html" class="link nav-link">Feedback</a>
+            </li>
+          </ul>
+        </div>
+
+
+
+        <div class="container-social-media">
+          <ul class="media-modal-icons">
+            <li class="social-modal">
+              <a href="https://www.instagram.com/vosup.creator?igsh=MXM1MW1uOXY5emhncA%3D%3D&utm_source=qr" class="social-media-link">
+                <svg class="social_media" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+        
+            <li class="social-modal">
+              <a href="https://t.me/ya_roge" class="social-media-link">
+                <svg class="social_media" width="24" height="24">
+                  <use href="./images/icons.svg#icon-telegram1"></use>
+                </svg>
+              </a>
+            </li>
+        
+            <li class="social-modal">
+              <a href="https://wa.me/message/H467SCUJ27NOK1" class="social-media-link">
+                <svg class="social_media" width="24" height="24">
+                  <use href="./images/icons.svg#icon-whatsapp"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        </div>
+        </div>
+
      
 </body>
 </html>
