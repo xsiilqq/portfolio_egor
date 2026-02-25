@@ -6,23 +6,268 @@ ol {
     padding-left: 20px;
 }
 
-.container {
-    background-color: rgb(8, 8, 8);
-}
 .about-me {
     display: flex;
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 100px;
     padding-bottom: 200px;
+    flex-direction: column;
+    gap: 40px;
 }
+
 .text-container {
     display: flex;
-    margin-right: 350px;
-    margin-left: 200px;
     flex-direction: column;
-    max-width: 600px;
+    align-items: flex-start;
+    max-width: 350px;
 }
+
+.about-page {
+    display: flex;
+    justify-content: flex-start;
+    color: #ffffff;
+    font-size: 55px;
+    font-weight: 500;
+    margin-bottom: 55px;
+}
+
+.about-aside {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 24px;
+}
+
+
+.name {
+    display: flex;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.about-text {
+    display: flex;
+    color: #ffffff;
+    text-indent: 5%;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    margin-top: auto;
+        line-height: 1.8;
+        text-indent: 0;
+
+}
+
+.foto-main img {
+display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.working-text {
+    display: flex;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.about-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-work {
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+    line-height: 1.8;
+    list-style-type: disc;
+    text-indent: 1%;
+    list-style-position: inside;
+    margin-bottom: 40px;
+}
+
+.process-text {
+    display: flex;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.process {
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+    line-height: 1.8;
+    list-style-type: disc;
+    text-indent: 1%;
+    margin-bottom: 40px;
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.photo-main {
+    display: none;
+}
+
+
+
+/* --- FOOTER --- */
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 50px;
+}
+
+.contact-item {
+    display: flex;
+    margin-bottom: 5px;
+    padding-left: 0px;
+}
+
+.contacts {
+    display: flex;
+    color: #ffffff;
+    padding-left: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.contacts-label {
+    display: flex;
+    color: #ffffff;
+    padding-left: 50px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.contacts-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+    color: #dbc650;
+}
+
+/* ---------------- TABLET SECTION ---------------- */
+
+/* ----------- tablet hero---------- */
+@media screen and (min-width: 768px) and (max-width: 1352px) {
+    .container {
+        max-width: 768px;
+    }
+    .about-me{
+    display: grid;
+    gap: 48px;
+    align-items: start;
+    grid-template-columns: 1fr 360px;
+  }
+
+  .about-aside{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* чтобы margin-top:auto работал как “вниз” */
+  }
+
+  .process-col{
+    width: 100%; /* ровно по ширине фото/aside */
+  }
+
+  .aside-text{
+    margin-top: auto; /* уходит в самый низ правой колонки */
+  }
+
+  .photo-main {
+    display: block;
+  }
+
+  .foto-main img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------- desktop SECTION ---------------- */
+
+/* -----------desktop header---------- */
+@media screen and (min-width: 1354px) {
+    .container {
+        min-width: 1158px;
+        background-color: rgb(0, 0, 0);
+        
+    }
+  .about-me {
+      display: grid;
+      margin-top: 200px;
+      grid-template-columns: 1fr 550px;
+      align-items: start;
+    padding-left: 150px;
+        padding-right: 150px;
+  }
+
+  .photo-main img {
+    max-height: 900px;
+  }
+
+  .photo-main {
+    display: flex;
+  }
+
+
+  .about-aside {
+      display: contents;
+  }
+
+  .foto-main {
+      grid-column: 2;
+      grid-row: 1;
+      width: 100%;
+      max-width: 450px;
+  }
+
+  .aside-text {
+      grid-column: 2;
+      grid-row: 2;
+  }
+
+  .process-col {
+      grid-column: 1;
+      grid-row: 2;
+  }
+
+
+  .about-left {
+      grid-column: 1;
+      grid-row: 1;
+      min-width: 0;
+  }
+
 
 .about-page {
     display: flex;
@@ -30,7 +275,7 @@ ol {
     padding-left: 50px;
     font-size: 70px;
     font-weight: 500;
-    margin-bottom: 45px;
+    margin-bottom: 70px;
 }
 
 .name {
@@ -48,15 +293,29 @@ ol {
     text-indent: 5%;
     letter-spacing: 1px;
     line-height: 1.8;
-    margin-bottom: 40px;
-    
+    margin-bottom: 100px;
+    font-size: 20px;
+    min-width: 600px;
 }
+
 
 .foto-main {
     display: flex;
     max-width: 600px;
     height: auto;
 }
+
+.foto-main img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+    .process-col,
+    .aside-text,
+    .foto-main {
+    order: 0;
+    }
 
 .working-text {
     display: flex;
@@ -72,6 +331,7 @@ ol {
     color: #ffffff;
     flex-direction: column;
     line-height: 1.8;
+    font-size: 20px;
     list-style-type: disc;
     text-indent: 1%;
     list-style-position: inside;
@@ -93,10 +353,11 @@ ol {
     line-height: 1.8;
     list-style-type: disc;
     text-indent: 1%; 
+    font-size: 20px;
     margin-bottom: 40px;
     list-style-type: decimal;
     padding-left: 20px;
-}
+} */
 
 /* --- FOOTER --- */
 .footer-section {
@@ -142,4 +403,5 @@ padding-left: 100px;
 .contacts-link:hover,
 .contacts-link:focus {
     color: #dbc650;
+}
 }

@@ -103,9 +103,27 @@ button {
 }
 
 .media-icons {
-  display: flex;
   gap: 12px;
   display: none;
+}
+
+.social-link,
+.social-media-link {
+  color: #fff;
+  transition: color 250ms ease, transform 200ms ease;
+}
+
+.social_media {
+  fill: currentColor;
+  transition: fill 250ms ease;
+}
+
+.social-link:hover,
+.social-link:focus,
+.social-media-link:hover,
+.social-media-link:focus {
+  color: #dbc650;
+  transform: scale(1.1);
 }
 
     .is-hidden {
@@ -173,7 +191,7 @@ button {
           transition: fill 250ms ease;
         }
     
-        .mobile-menu-open:hover {
+        .mobile-menu-open:hover      {
           color: #dbc650;
         }
   
@@ -181,7 +199,7 @@ button {
 /* <!--------mobile menu --------> */
 
 .mobile-menu {
-position: absolute;
+position: fixed;
   top: 0%;
   left: 0%;
   width: 100%;
@@ -282,14 +300,9 @@ position: absolute;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-media-link:hover,
-.social-media-link:focus,
-.social-media-link.active {
+.media-icons .social-link:hover,
+.media-icons .social-link:focus {
   color: #dbc650;
-}
-
-.social_media {
-fill: currentColor;
 }
 
 
@@ -313,6 +326,11 @@ fill: currentColor;
     align-items: center;
   }
 
+  .nav-link {
+    font-weight: 300;
+    font-size: 18px;
+  }
+
   .media-icons {
     display: flex;
   }
@@ -333,6 +351,8 @@ fill: currentColor;
 .nav {
   display: flex;
   padding-top: 20px;
+  justify-content: center;
+  
 }
 .logo-header {
   display: flex;
@@ -370,11 +390,7 @@ align-items: flex-start;
 .nav-link:focus {
   color: #dbc650;
 }
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+
 
 .nav-list,
 .media-icons {
@@ -403,10 +419,6 @@ align-items: flex-start;
 }
 
 
-.social_media {
-  fill: #ffffff;
-}
-
 .media-icons {
   display: flex;
   flex-direction: row;
@@ -429,8 +441,4 @@ align-items: flex-start;
 }
 
 
-.media-icons:hover,
-.media-icons:focus{
-  fill: #dbc650; 
-}
 } 
