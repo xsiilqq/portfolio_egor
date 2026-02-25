@@ -53,10 +53,12 @@
     margin-left: 20px;
     margin-top: -30px;
     padding: 20px 30px 20px 20px;
+    max-width: 265px;
  }
 
 .menu-price {
    display: grid;
+   justify-items: center;
    grid-template-columns: repeat(1, 4fr);
    gap: 50px;
    list-style: none;
@@ -64,6 +66,7 @@
 
 .price-title {
    font-size: 20px;
+   font-weight: 300;
 }
 
 .price-text {
@@ -84,18 +87,20 @@
 
 .footer-title {
    display: flex;
+   justify-content: center;
    color: #ffffff;
    margin-bottom: 30px;
-   padding-left: 40px;
    font-size: 34px;
    font-weight: 400;
+   padding-left: 10px;
 }
 
 .footer-text {
    display: flex;
+   justify-content: center;
    color: #ffffff;
    margin-bottom: 40px;
-   padding-left: 20px;
+   padding-left: 10px;
    padding-right: 20px;
    line-height: 2;
    font-weight: 300;
@@ -131,6 +136,14 @@
    padding: 6px 0;
    color: #fff;
    outline: none;
+}
+
+.form-textarea {
+   width: 100%;
+   min-width: 200px;
+   max-height: 33px;
+   resize: none;
+
 }
 
 .form-input:hover {
@@ -232,10 +245,24 @@
       margin-left: 20px;
       margin-top: -80px;
       padding: 40px 30px 40px 20px;
+      min-width: 295px;
    }
 
       .send-form {
       flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      }
+      .footer-section {
+         padding-left: 40px;
+         padding-right: 40px;
+      }
+
+      .footer-text {
+         justify-content: center;
+      }
+      .footer-title {
+         justify-content: center;
       }
 }
 
@@ -272,8 +299,8 @@
 
 .menu-price {
    display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap: 30px;
+   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   gap: 50px;
    list-style: none;
 }
 
@@ -300,6 +327,7 @@
    display: flex;
    flex-direction: column;
    background-color: #000000;
+   min-width: 300px;
    margin-left: 20px;
    margin-top: -80px;
    padding: 40px 30px 40px 20px;
@@ -335,12 +363,13 @@
    background-color: black;
    flex-direction: column;
    padding-left: 280px;;
-   margin: 0 40px 0px 40px;
+   margin: 0px 40px 0px 40px;
    padding-top: 80px;
    padding-bottom: 190px;
 }
 .footer-title {
    display: flex;
+   justify-content: flex-start;
    color: #ffffff;
    margin-bottom: 30px;
    font-size: 34px;
@@ -349,6 +378,7 @@
 
 .footer-text {
    display: flex;
+   justify-content: flex-start;
    color: #ffffff;
    margin-bottom: 40px;
    line-height: 2;
@@ -358,7 +388,7 @@
 .send-form{
    display: flex;
    gap: 30px;
-   align-items: flex-end;
+   flex-direction: row;
 }
 .form-field {
    display: flex;

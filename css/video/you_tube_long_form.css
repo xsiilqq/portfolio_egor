@@ -1,6 +1,6 @@
 body {
     font-family: Arial;
-    background: #111;
+    background: rgb(8, 8, 8);
     color: white;
 }
 
@@ -33,13 +33,67 @@ body {
 
 .top-works__title {
     display: flex;
+    align-items: center;
     color: #ffffff;
     font-size: 40px;
     font-weight: 400;
     justify-content: center;
     padding-top: 150px;
+    padding-bottom: 80px;
+}
+.name {
+    display: flex;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    justify-content: center;
+    padding-top: 20px;
 }
 
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 100px;
+}
+
+.video-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.video-views {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+    font-size: 12px;
+    opacity: 0.8;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.07);
+}
+
+/* маленькая точка слева (красиво) */
+.video-views::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #dbc650;
+    opacity: 0.9;
+}
+
+
+
+/* ---------------- desktop SECTION ---------------- */
+
+/* -----------desktop header---------- */
+@media screen and (min-width: 1158px) {
+    .container {
+        min-width: 1158px;
+    }
 .name {
     display: flex;
     color: #ffffff;
@@ -82,4 +136,5 @@ body {
 .video-card p {
     margin-top: 8px;
     font-weight: bold;
+}
 }
