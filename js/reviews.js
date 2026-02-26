@@ -85,7 +85,7 @@ function showToast(message) {
 onSnapshot(query(reviewsRef, orderBy("createdAt", "desc")), (snapshot) => {
   const reviews = snapshot.docs
     .map(d => d.data())
-    .filter(r => r.status === "approved");
+    .filter(r => r.status === "true");
 
   renderReviews(reviews);
 });

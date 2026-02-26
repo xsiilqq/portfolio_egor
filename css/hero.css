@@ -1,6 +1,6 @@
 
 .background {
-  background-image: url("../images/IMG_5221.JPG");
+  background-image: url("../images/hero-mobile.webp");
   min-height: 100dvh;
   background-size: cover;
   background-position: center;
@@ -97,6 +97,9 @@
   .container {
     min-width: 1158px;
   }
+.background {
+  background-image: url("../images/hero-img.webp");
+}
 
 .container-hero {
   display: flex;

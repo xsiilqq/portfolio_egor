@@ -1,5 +1,5 @@
 .background {
-   background-image: url("../images/IMG_5221.JPG");
+   background-image: url("../images/hero-mobile.webp");
    min-height: 100vh;
    background-repeat: no-repeat;
    position: relative;
@@ -18,7 +18,7 @@
 }
 .service-section {
    background-color: black;
-   padding: 90px 40px 90px 40px;
+   padding: 90px 20px 90px 20px;
    margin-top: 80px;
 }
 .service-text {
@@ -30,7 +30,7 @@
 }
 
 .price-container {
-   padding: 60px 20px;
+   padding: 60px 10px;
       margin: 0;
       background-color: #52691d;
 }
@@ -54,6 +54,7 @@
     margin-top: -30px;
     padding: 20px 30px 20px 20px;
     max-width: 265px;
+
  }
 
 .menu-price {
@@ -204,9 +205,7 @@
 
 /* ----------- tablet hero---------- */
 @media screen and (min-width: 768px) and (max-width: 1157px) {
-   .container {
-      max-width: 768px;
-   }
+
       .menu-price {
          display: grid;
          grid-template-columns: repeat(2, 2fr);
@@ -277,6 +276,10 @@
 @media screen and (min-width: 1158px) {
    .container {
       min-width: 1158px;
+   }
+
+   .background {
+   background-image: url("../images/hero-img.webp");
    }
 
 

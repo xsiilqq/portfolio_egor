@@ -8,7 +8,7 @@ ol {
 
 .about-me {
     display: flex;
-    padding-left: 15px;
+    padding-left: 20px;
     padding-right: 15px;
     margin-top: 100px;
     padding-bottom: 200px;
@@ -20,7 +20,8 @@ ol {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 350px;
+    min-width: 290px;
+    align-items: center;
 }
 
 .about-page {
@@ -38,7 +39,6 @@ ol {
     gap: 24px;
 }
 
-
 .name {
     display: flex;
     color: #ffffff;
@@ -55,8 +55,8 @@ ol {
     line-height: 1.8;
     margin-bottom: 40px;
     margin-top: auto;
-        line-height: 1.8;
-        text-indent: 0;
+    line-height: 1.8;
+    text-indent: 0;
 
 }
 
@@ -168,13 +168,15 @@ display: block;
 /* ----------- tablet hero---------- */
 @media screen and (min-width: 768px) and (max-width: 1352px) {
     .container {
-        max-width: 768px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
     .about-me{
     display: grid;
     gap: 48px;
     align-items: start;
     grid-template-columns: 1fr 360px;
+    padding-left: 15px;
   }
 
   .about-aside{
@@ -220,16 +222,17 @@ display: block;
     .container {
         min-width: 1158px;
         background-color: rgb(0, 0, 0);
-        
     }
   .about-me {
       display: grid;
       margin-top: 200px;
-      grid-template-columns: 1fr 550px;
-      align-items: start;
-    padding-left: 150px;
-        padding-right: 150px;
+      grid-template-columns: 1fr 600px;
+    padding-left: 100px;
+    padding-right: 150px;
+    justify-items: start;
+    align-items: stretch;
   }
+
 
   .photo-main img {
     max-height: 900px;
@@ -248,7 +251,6 @@ display: block;
       grid-column: 2;
       grid-row: 1;
       width: 100%;
-      max-width: 450px;
   }
 
   .aside-text {
@@ -272,7 +274,6 @@ display: block;
 .about-page {
     display: flex;
     color: #ffffff;
-    padding-left: 50px;
     font-size: 70px;
     font-weight: 500;
     margin-bottom: 70px;
@@ -281,7 +282,6 @@ display: block;
 .name {
     display: flex;
     color: #ffffff;
-    padding-left: 50px;
     font-size: 40px;
     font-weight: 400;
     margin-bottom: 15px;
@@ -295,7 +295,8 @@ display: block;
     line-height: 1.8;
     margin-bottom: 100px;
     font-size: 20px;
-    min-width: 600px;
+    min-width: 500px;
+    max-width: 680px;
 }
 
 
