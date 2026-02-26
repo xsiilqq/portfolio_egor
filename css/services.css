@@ -17,7 +17,10 @@
    font-weight: 500;
 }
 .service-section {
-   background-color: black;
+      background: linear-gradient(to bottom,
+               rgba(0, 0, 0, 0) 0%,
+               rgba(0, 0, 0, 0.747) 90%,
+               rgb(0, 0, 0) 100%);
    padding: 90px 20px 90px 20px;
    margin-top: 80px;
 }
@@ -26,13 +29,13 @@
    color: #ffffff;
    margin-bottom: 60px;
    line-height: 2;
-   font-weight: 300;
+   font-weight: 400;
 }
 
 .price-container {
    padding: 60px 10px;
       margin: 0;
-      background-color: #52691d;
+      background-color: #303b15;
 }
 
 .price-item img {
@@ -52,6 +55,7 @@
     background-color: #000000;
     margin-left: 20px;
     margin-top: -30px;
+    min-height: 115px;
     padding: 20px 30px 20px 20px;
     max-width: 265px;
 
@@ -88,12 +92,11 @@
 
 .footer-title {
    display: flex;
-   justify-content: center;
    color: #ffffff;
    margin-bottom: 30px;
    font-size: 34px;
    font-weight: 400;
-   padding-left: 10px;
+   padding-left: 20px;
 }
 
 .footer-text {
@@ -101,7 +104,7 @@
    justify-content: center;
    color: #ffffff;
    margin-bottom: 40px;
-   padding-left: 10px;
+   padding-left: 20px;
    padding-right: 20px;
    line-height: 2;
    font-weight: 300;
@@ -133,7 +136,7 @@
    background: transparent;
    border: none;
    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-   width: 140px;
+   min-width: 200px;
    padding: 6px 0;
    color: #fff;
    outline: none;
@@ -216,7 +219,7 @@
                padding: 60px 20px;
                margin: 40px;
                margin: 0;
-               background-color: #52691d;
+               background-color: #303b15;
             }
             .price-item {
                overflow: hidden;
@@ -297,7 +300,6 @@
    padding: 60px 200px;
    margin: 40px;
    margin: 0;
-   background-color: #52691d;
 }
 
 .menu-price {
@@ -366,7 +368,7 @@
    background-color: black;
    flex-direction: column;
    padding-left: 280px;;
-   margin: 0px 40px 0px 40px;
+   margin: -5px 40px 0px 40px;
    padding-top: 80px;
    padding-bottom: 190px;
 }
