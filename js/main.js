@@ -75,5 +75,29 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.querySelectorAll(".price-item").forEach((card) => {
+  const more = card.querySelector(".more-btn");
+  const close = card.querySelector(".close-btn");
+
+  const open = () => {
+    card.classList.add("is-open");
+    more?.setAttribute("aria-expanded", "true");
+    card.querySelector(".overlay")?.setAttribute("aria-hidden", "false");
+  };
+
+  const hide = () => {
+    card.classList.remove("is-open");
+    more?.setAttribute("aria-expanded", "false");
+    card.querySelector(".overlay")?.setAttribute("aria-hidden", "true");
+  };
+
+  more?.addEventListener("click", (e) => { e.preventDefault(); open(); });
+  close?.addEventListener("click", (e) => { e.preventDefault(); hide(); });
+
+  // optional: закрывать кликом по затемнению (не по тексту)
+  card.querySelector(".overlay")?.addEventListener("click", (e) => {
+    if (e.target.classList.contains("overlay")) hide();
+  });
+});
 
 

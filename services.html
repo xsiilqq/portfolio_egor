@@ -25,6 +25,7 @@
 <link rel="stylesheet" href="css/services.css">
 
 <script src="./js/main.js"></script>
+<script defer src="./js/services.js"></script>
 
 
 </head>
@@ -110,11 +111,13 @@
                       <div class="img-container">
                         <a href="" class="price-link">
                           <img src="images/cars.jpg" alt="Photography">
+                          
                         </a>
                       </div>
                       <div class="price-overlay">
                         <h2 class="price-title">Photography from 200€</h2>
                         <p class="price-text">Photoshoots, retouching, designs.</p>
+                        <button class="more-btn" type="button" aria-expanded="false">More</button>
                       </div>
                       <p class="overlay">
                         14 Stylish and User-Friendly App Design Concepts · Task
@@ -127,11 +130,13 @@
                       <div class="img-container">
                         <a href="" class="price-link">
                           <img src="images/cars.jpg" alt="Photography">
+                          
                         </a>
                       </div>
                       <div class="price-overlay">
                         <h2 class="price-title">Videography from 150€</h2>
                         <p class="price-text">Photoshoots, retouching, designs.</p>
+                        <button class="more-btn" type="button" aria-expanded="false">More</button>
                       </div>
                       <p class="overlay">
                         14 Stylish and User-Friendly App Design Concepts · Task
@@ -144,11 +149,13 @@
                       <div class="img-container">
                         <a href="" class="price-link">
                           <img src="images/cars.jpg" alt="Photography">
+                          
                         </a>
                       </div>
                       <div class="price-overlay">
                         <h2 class="price-title">Editing from 100€</h2>
                         <p class="price-text">Photoshoots, retouching, designs.</p>
+                        <button class="more-btn" type="button" aria-expanded="false">More</button>
                       </div>
                       <p class="overlay">
                         14 Stylish and User-Friendly App Design Concepts · Task
@@ -161,11 +168,13 @@
                       <div class="img-container">
                         <a href="" class="price-link">
                           <img src="images/cars.jpg" alt="Photography">
+                          
                         </a>
                       </div>
                       <div class="price-overlay">
                         <h2 class="price-title">Photography from 200€</h2>
                         <p class="price-text">Photoshoots, retouching, designs.</p>
+                        <button class="more-btn" type="button" aria-expanded="false">More</button>
                       </div>
                       <p class="overlay">
                         14 Stylish and User-Friendly App Design Concepts · Task
@@ -247,7 +256,13 @@
           </h1>
           <p class="footer-text">Leave your name and email, and briefly describe the shoot you have in mind.</p>
 
-                <form class="send-form">
+                <form class="send-form"
+                      action="https://formspree.io/f/xnjbrnle"
+                      method="POST"
+                      data-formspree>
+
+                      <input type="hidden" name="_redirect" value="services.html#sent">
+
                   <div class="form-field">
                     <label class="form-label" for="name">Name</label>
                     <input class="form-input" id="name" type="text" name="name" required>
@@ -260,11 +275,13 @@
                 
                   <div class="form-field">
                     <label class="form-label" for="comment">Message</label>
-                    <textarea class="form-input form-textarea" id="comment" name="comment" rows="5" required></textarea>
+                    <textarea class="form-input form-textarea" id="comment" name="Message" rows="5" required></textarea>
                   </div>
                   <button class="form-btn" type="submit">Send</button>
                 </form>
         </section>
         </footer>
+
+        
 </body>
 </html>

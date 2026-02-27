@@ -91,7 +91,7 @@ onSnapshot(query(reviewsRef, orderBy("createdAt", "desc")), (snapshot) => {
 });
 
 // form submit (write)
-const form = document.querySelector(".send-feedback");
+const form = document.querySelector(".send-feedback"); // только отзывы
 
 if (!form) {
   console.warn("Форма не найдена: .send-feedback");

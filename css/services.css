@@ -1,5 +1,5 @@
 .background {
-   background-image: url("../images/hero-mobile.webp");
+   background-image: url("../images/hero-img.webp");
    min-height: 100vh;
    background-repeat: no-repeat;
    position: relative;
@@ -83,12 +83,9 @@
      inset: 0;
      background: rgba(0, 0, 0, 0.85);
      color: #e9e7e7;
-
      padding: 40px 32px;
-
      transform: translateY(100%);
      transition: transform 300ms ease;
-
      display: flex;
      align-items: center;
   }
@@ -109,6 +106,35 @@
      box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   }
+
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+  .more-btn {
+   color: #fff;
+   display: flex;
+   justify-content: flex-end;
+   font-size: 13px;
+   text-decoration: underline;
+      cursor: pointer;
+  }
+
+  .more-btn::after {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: -2px;
+     width: 100%;
+     height: 1px;
+     background: currentColor;
+     transform: scaleX(0);
+     transform-origin: left;
+     transition: transform 250ms ease;
+  }
+
+  .more-btn:hover::after {
+     transform: scaleX(1);
+  }
+}
 
 
 /* --- FOOTER SECTION --- */
